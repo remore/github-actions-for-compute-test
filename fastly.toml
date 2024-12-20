@@ -6,7 +6,7 @@ cloned_from = "https://github.com/fastly/compute-starter-kit-go-default"
 description = ""
 language = "go"
 manifest_version = 3
-name = "testgo"
+name = "testgo2"
 service_id = ""
 
 [scripts]

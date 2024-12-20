@@ -21,7 +21,7 @@ addEventListener("fetch", (event) => event.respondWith(handleRequest(event)));
 
 async function handleRequest(event) {
   // Log service version
-  console.log("FASTLY_SERVICE_VERSION:", env('FASTLY_SERVICE_VERSION') || 'local');
+  console.log("testFASTLY_SERVICE_VERSION:", env('FASTLY_SERVICE_VERSION') || 'local');
   
   // Get the client request.
   let req = event.request;

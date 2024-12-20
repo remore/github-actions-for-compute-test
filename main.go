@@ -71,7 +71,7 @@ func main() {
 			// Send a default synthetic response.
 			w.Header().Set("Content-Type", "text/html; charset=utf-8")
 
-			fmt.Fprintln(w, `<iframe src="https://developer.fastly.com/compute-welcome" style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>`)
+			fmt.Fprintln(w, `<p>test hello</p><iframe src="https://developer.fastly.com/compute-welcome" style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>`)
 			return
 		}
 

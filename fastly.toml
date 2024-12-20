@@ -2,13 +2,14 @@
 # https://www.fastly.com/documentation/reference/compute/fastly-toml
 
 authors = [""]
-cloned_from = "https://github.com/fastly/compute-starter-kit-javascript-default"
+cloned_from = "https://github.com/fastly/compute-starter-kit-go-default"
 description = ""
-language = "javascript"
+language = "go"
 manifest_version = 3
-name = "testjs"
+name = "testgo"
 service_id = ""
 
 [scripts]
-  build = "npm run build"
-  post_init = "npm install"
+  build = "go build -o bin/main.wasm ."
+  env_vars = ["GOARCH=wasm", "GOOS=wasip1"]
+  post_init = "go get github.com/fastly/compute-sdk-go@latest"

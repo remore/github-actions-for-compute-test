@@ -1,6 +1,6 @@
-# Default Starter Kit for JavaScript
+# Default Starter Kit for Go
 
-[![Deploy to Fastly](https://deploy.edgecompute.app/button)](https://deploy.edgecompute.app/fastly/compute-starter-kit-javascript-default)
+[![Deploy to Fastly](https://deploy.edgecompute.app/button)](https://deploy.edgecompute.app/deploy)
 
 Get to know the Fastly Compute environment with a basic starter that demonstrates routing, simple synthetic responses and code comments that cover common patterns.
 
@@ -14,31 +14,11 @@ Get to know the Fastly Compute environment with a basic starter that demonstrate
 
 ## Understanding the code
 
-This starter is intentionally lightweight, and requires no dependencies aside from the [`@fastly/js-compute`](https://www.npmjs.com/package/@fastly/js-compute) npm package. It will help you understand the basics of processing requests at the edge using Fastly. This starter includes implementations of common patterns explained in our [using Compute](https://www.fastly.com/documentation/guides/compute/javascript/) and [VCL migration](https://www.fastly.com/documentation/guides/compute/migrate/) guides.
+This starter is intentionally lightweight, and requires no dependencies aside from the [`"github.com/fastly/compute-sdk-go/fsthttp"`](https://github.com/fastly/compute-sdk-go) repo. It will help you understand the basics of processing requests at the edge using Fastly. This starter includes implementations of common patterns explained in our [using Compute](https://www.fastly.com/documentation/guides/compute/go/) and [VCL migration](https://www.fastly.com/documentation/guides/compute/migrate/) guides.
 
 The starter doesn't require the use of any backends. Once deployed, you will have a Fastly service running on Compute that can generate synthetic responses at the edge.
 
-The template uses webpack to bundle `index.js` and its imports into a single JS file, `bin/index.js`, which is then wrapped into a `.wasm` file, `bin/index.wasm` using the `js-compute-runtime` CLI tool bundled with the `@fastly/js-compute` npm package, and bundled into a `.tar.gz` file ready for deployment to Compute.
-
-## Running the application
-
-To create an application using this starter kit, create a new directory for your application and switch to it, and then type the following command:
-
-```shell
-npm create @fastly/compute@latest -- --language=javascript --default-starter-kit
-```
-
-To build and run your new application in the local development environment, type the following command:
-
-```shell
-npm run start
-```
-
-To build and deploy your application to your Fastly account, type the following command. The first time you deploy the application, you will be prompted to create a new service in your account. 
-
-```shell
-npm run deploy
-```
+It is recommended to use the [Fastly CLI](https://github.com/fastly/cli) for this template. The template uses the `fastly.toml` scripts, to allow for building the project using your installed Go compiler. The Fastly CLI should also be used for serving and testing your build output, as well as deploying your finalized package!
 
 ## Security issues
 
